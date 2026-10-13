@@ -423,3 +423,15 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). New detectors need a true-positive fixtu
 
 - In-repo docs: [docs/](docs/index.md)
 - Wiki: [https://github.com/fitzyracing1/fakegreen/wiki](https://github.com/fitzyracing1/fakegreen/wiki)
+
+## FAQ
+
+### Why does fakegreen report a finding?
+
+fakegreen detects suspicious patterns in Git diffs that may weaken tests. Review each finding to determine whether the change is intentional.
+
+### What do the exit codes mean?
+
+* `0`: No findings meet the configured failure threshold.
+* `1`: Findings meet the configured failure threshold.
+* `2`: A usage or Git error occurred.
